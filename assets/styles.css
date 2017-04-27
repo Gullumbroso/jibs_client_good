@@ -1,0 +1,75 @@
+html, body {
+    font-family: 'Roboto', sans-serif;
+    background: white;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.main-container {
+    margin: 40px;
+    padding: 40px;
+}
+
+.input-container {
+    margin-top: 10px;
+    position: relative;
+}
+
+.input-container span {
+    position: relative;
+    top: -11px;
+}
+
+.logo {
+    margin: 10px 0 50px;
+}
+
+h4 {
+    font-size: 1.3em;
+    font-weight: 100;
+    line-height:1.5em;
+}
+
+md-input-container {
+    margin: 0 10px;
+}
+
+.results {
+    max-height: 2000px;
+    opacity: 1;
+    transition: all ease-out 0.4s;
+    overflow: hidden;
+}
+
+.results p {
+    font-size: 1.2em;
+}
+
+.results.ng-hide {
+    opacity: 0;
+    max-height: 0;
+}
+
+.results .show-in-delay {
+    opacity: 1.0;
+    transition: all ease-out 0.4s;
+}
+
+.result-path ul li span {
+    color: #3F51B5;
+}
+
+.result-path ul li span.result-even {
+    color: #2196F3;
+}
+
+.go {
+    margin-top: 15px;
+    transition: all ease-out 0.4s;
+}
