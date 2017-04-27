@@ -1,13 +1,13 @@
 angular.module('JibsApp')
-    .directive('navbar', ['$location', '$routeParams', '$rootScope', function ($location, $routeParams, $rootScope) {
+    .directive('navbar', ['$location', '$rootScope', function ($location, $rootScope) {
         return {
             restrict: 'E',
             templateUrl: 'app/components/views/navbar.view.html',
             controller: 'NavbarController'
         };
     }])
-    .directive('conversation', ['$location', '$routeParams', '$rootScope',
-        function ($location, $routeParams, $rootScope) {
+    .directive('conversation', ['$location', '$rootScope',
+        function ($location, $rootScope) {
         return {
             restrict: 'E',
             templateUrl: 'app/components/views/conversation.view.html',

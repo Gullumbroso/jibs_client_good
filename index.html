@@ -12,68 +12,7 @@
 </head>
 <body ng-app="JibsApp" ng-cloak>
 <div class="main-container text-center" ng-controller="HomeController">
-    <div class="logo">
-        <img width="220" src="assets/images/Jibs!.jpg">
-    </div>
-    <h4>
-        Tells you everything you need to know about people,<br>
-        given that stereotypes and the inference rules are true.
-    </h4>
-    <form ng-submit="go($event)">
-        <div>
-            <div class="input-container">
-                <span>Are</span>
-                <!--<md-autocomplete required md-no-float class="inline-block " placeholder="ex. jews"-->
-                <!--md-input-name="autocompleteField"-->
-                <!--md-input-minlength="2"-->
-                <!--md-input-maxlength="18"-->
-                <!--md-no-cache="noCache"-->
-                <!--md-selected-item="query.source"-->
-                <!--md-search-text="sourceText"-->
-                <!--md-items="item in querySearch(sourceText)"-->
-                <!--md-item-text="item.value"-->
-                <!--md-require-match-->
-                <!--&gt;-->
-                <!--<md-item-template>-->
-                <!--<span md-highlight-text="sourceText">{{item.display}}</span>-->
-                <!--</md-item-template>-->
-                <!--<div ng-messages="searchForm.autocompleteField.$error" ng-if="searchForm.autocompleteField.$touched">-->
-                <!--<div ng-message="required">You <b>must</b> have a favorite state.</div>-->
-                <!--<div ng-message="md-require-match">Please select an existing state.</div>-->
-                <!--<div ng-message="minlength">Your entry is not long enough.</div>-->
-                <!--<div ng-message="maxlength">Your entry is too long.</div>-->
-                <!--</div>-->
-                <!--</md-autocomplete>-->
-                <md-input-container md-no-float class="inline-block ">
-                    <input ng-model="query.source" placeholder="ex. jews">
-                </md-input-container>
-                <md-input-container md-no-float class="inline-block">
-                    <input ng-model="query.target" placeholder="ex. lazy">
-                </md-input-container>
-                <span>?</span>
-            </div>
-            <div class="results" ng-show="status == 2">
-                <div class="answer" ng-class="{'show-in-delay': presentResults}">
-                    <h4 style="font-weight: 600">
-                        {{answer}}
-                    </h4>
-                </div>
-                <div class="result-path" ng-class="{'show-in-delay': presentResults}">
-                    <ul class="list-inline">
-                        <li ng-repeat="node in path track by $index">
-                            <span ng-class="{'result-even': $index % 2 == 0}">{{node}}</span>
-                            <span ng-show="$index + 1 != path.length" style="margin-left: 8px; color: lightslategray"> >></span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div>
-                <md-button type="submit" class="md-raised md-primary go">
-                    {{goTitle}}
-                </md-button>
-            </div>
-        </div>
-    </form>
+    <conversation></conversation>
 </div>
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -86,111 +25,10 @@
 <script type="text/javascript" src="app/app.js"></script>
 
 <script type="text/javascript" src="app/components/controllers/conversation.controller.js"></script>
+<script type="text/javascript" src="app/components/controllers/home.controller.js"></script>
 <script type="text/javascript" src="app/components/controllers/navbar.controller.js"></script>
+
+<script type="text/javascript" src="app/components/directives/directives.js"></script>
 
 </body>
 </html>
-
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
-    <!--<meta charset="UTF-8">-->
-    <!--<title>Jibs</title>-->
-    <!--<base href="/">-->
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
-    <!--<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">-->
-    <!--<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">-->
-    <!--<link rel="stylesheet" href="http://localhost:63342/jibs_front/assets/styles.css">-->
-<!--</head>-->
-<!--<body ng-app="JibsApp" ng-cloak>-->
-<!--<div class="main-container text-center" ng-controller="NavbarController">-->
-    <!--<div class="logo">-->
-        <!--<img width="220" src="">-->
-    <!--</div>-->
-    <!--<h4>-->
-        <!--Tells you everything you need to know about people,<br>-->
-        <!--given that stereotypes and the inference rules are true.-->
-    <!--</h4>-->
-    <!--<form ng-submit="go($event)">-->
-        <!--<div>-->
-            <!--<div class="input-container">-->
-                <!--<span>Are</span>-->
-                <!--&lt;!&ndash;<md-autocomplete required md-no-float class="inline-block " placeholder="ex. jews"&ndash;&gt;-->
-                <!--&lt;!&ndash;md-input-name="autocompleteField"&ndash;&gt;-->
-                <!--&lt;!&ndash;md-input-minlength="2"&ndash;&gt;-->
-                <!--&lt;!&ndash;md-input-maxlength="18"&ndash;&gt;-->
-                <!--&lt;!&ndash;md-no-cache="noCache"&ndash;&gt;-->
-                <!--&lt;!&ndash;md-selected-item="query.source"&ndash;&gt;-->
-                <!--&lt;!&ndash;md-search-text="sourceText"&ndash;&gt;-->
-                <!--&lt;!&ndash;md-items="item in querySearch(sourceText)"&ndash;&gt;-->
-                <!--&lt;!&ndash;md-item-text="item.value"&ndash;&gt;-->
-                <!--&lt;!&ndash;md-require-match&ndash;&gt;-->
-                <!--&lt;!&ndash;&gt;&ndash;&gt;-->
-                <!--&lt;!&ndash;<md-item-template>&ndash;&gt;-->
-                <!--&lt;!&ndash;<span md-highlight-text="sourceText">{{item.display}}</span>&ndash;&gt;-->
-                <!--&lt;!&ndash;</md-item-template>&ndash;&gt;-->
-                <!--&lt;!&ndash;<div ng-messages="searchForm.autocompleteField.$error" ng-if="searchForm.autocompleteField.$touched">&ndash;&gt;-->
-                <!--&lt;!&ndash;<div ng-message="required">You <b>must</b> have a favorite state.</div>&ndash;&gt;-->
-                <!--&lt;!&ndash;<div ng-message="md-require-match">Please select an existing state.</div>&ndash;&gt;-->
-                <!--&lt;!&ndash;<div ng-message="minlength">Your entry is not long enough.</div>&ndash;&gt;-->
-                <!--&lt;!&ndash;<div ng-message="maxlength">Your entry is too long.</div>&ndash;&gt;-->
-                <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                <!--&lt;!&ndash;</md-autocomplete>&ndash;&gt;-->
-                <!--<md-input-container md-no-float class="inline-block ">-->
-                    <!--<input ng-model="query.source" placeholder="ex. jews">-->
-                <!--</md-input-container>-->
-                <!--<md-input-container md-no-float class="inline-block">-->
-                    <!--<input ng-model="query.target" placeholder="ex. lazy">-->
-                <!--</md-input-container>-->
-                <!--<span>?</span>-->
-            <!--</div>-->
-            <!--<div class="results" ng-show="status == 2">-->
-                <!--<div class="answer" ng-class="{'show-in-delay': presentResults}">-->
-                    <!--<h4 style="font-weight: 600">-->
-                        <!--{{answer}}-->
-                    <!--</h4>-->
-                <!--</div>-->
-                <!--<div class="result-path" ng-class="{'show-in-delay': presentResults}">-->
-                    <!--<ul class="list-inline">-->
-                        <!--<li ng-repeat="node in path track by $index">-->
-                            <!--<span ng-class="{'result-even': $index % 2 == 0}">{{node}}</span>-->
-                            <!--<span ng-show="$index + 1 != path.length" style="margin-left: 8px; color: lightslategray"> >></span>-->
-                        <!--</li>-->
-                    <!--</ul>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div>-->
-                <!--<md-button type="submit" class="md-raised md-primary go">-->
-                    <!--{{goTitle}}-->
-                <!--</md-button>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</form>-->
-<!--</div>-->
-
-<!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
-<!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>-->
-<!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.js"></script>-->
-<!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-cookies.js"></script>-->
-<!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>-->
-<!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>-->
-<!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>-->
-<!--<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>-->
-
-<!--&lt;!&ndash; App &ndash;&gt;-->
-<!--<script type="text/javascript" src="app/app.js"></script>-->
-<!--<script type="text/javascript" src="app/routes.js"></script>-->
-
-<!--&lt;!&ndash; Controllers &ndash;&gt;-->
-<!--<script type="text/javascript" src="app/components/controllers/conversation.controller.js"></script>-->
-<!--<script type="text/javascript" src="app/components/controllers/navbar.controller.js"></script>-->
-
-
-<!--&lt;!&ndash; Directives &ndash;&gt;-->
-<!--<script type="text/javascript" src="app/components/directives/directives.js"></script>-->
-
-<!--&lt;!&ndash; Services &ndash;&gt;-->
-
-<!--</body>-->
-<!--</html>-->
