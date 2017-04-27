@@ -13,4 +13,13 @@ angular.module('JibsApp')
             templateUrl: 'app/components/views/conversation.view.html',
             controller: 'ConversationController'
         };
+    }])
+    .directive('sidenav', ['$location', '$rootScope',
+    function ($location, $rootScope) {
+        return {
+            restrict: 'E',
+            templateUrl: 'app/components/views/sidenav.view.html',
+            controller: 'SidenavController'
+        };
     }]);
+

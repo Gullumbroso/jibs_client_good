@@ -1,0 +1,32 @@
+<div ng-mouseover="openLeft()" class="hoverSidenav" ></div>
+<md-sidenav layout="column" class="md-sidebar-left" md-component-id="left"
+            md-disable-backdrop ng-mouseover="openLeft()" ng-mouseleave="closeLeft()">
+
+    <!--pin sidenav button-->
+    <md-button class="md-fab md-mini pinButton">
+        <md-icon md-svg-src="img/icons/cake.svg"></md-icon>
+    </md-button>
+
+
+    <!--list of steps, representing the process in making-->
+    <md-list>
+        <!-- List item #1 -->
+        <md-list-item>
+            <md-button>
+                <md-icon md-svg-src="./assets/svg/avatar-1.svg" class="avatar"></md-icon>
+                Lia Luogo
+            </md-button>
+        </md-list-item>
+
+        <!-- List item #2 -->
+        <md-list-item>
+            <md-button>
+                <md-icon md-svg-src="./assets/svg/avatar-4.svg" class="avatar"></md-icon>
+                Lawrence Ray
+            </md-button>
+        </md-list-item>
+
+    </md-list>
+
+</md-sidenav>
+

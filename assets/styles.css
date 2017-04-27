@@ -73,3 +73,12 @@ md-input-container {
     margin-top: 15px;
     transition: all ease-out 0.4s;
 }
+
+.hoverSidenav{
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    width: 40px;
+    background: #ff5a6e;
+}
