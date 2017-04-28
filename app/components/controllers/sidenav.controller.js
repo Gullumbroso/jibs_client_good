@@ -4,7 +4,7 @@
 
 angular
     .module('JibsApp')
-    .controller('SidenavController', function ($scope, $rootScope, $timeout, $mdSidenav, $log) {
+    .controller('SidenavController', function ($scope, $rootScope, $timeout, $mdSidenav, $log, WebService) {
         $scope.openLeft = buildOpener('left');
         $scope.closeLeft = buildCloser('left');
         $scope.stick = false;

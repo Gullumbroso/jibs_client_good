@@ -3,6 +3,8 @@ angular.module('JibsApp')
     .controller('MailContentController', ['$scope', '$rootScope', '$location', '$mdMedia', '$mdMenu', 'WebService', '$mdDialog',
         function ($scope, $rootScope, $location, $mdMedia, $mdMenu, WebService, $mdDialog) {
 
+            $rootScope.showNavLogo = true;
+
             $scope.next = function (ev) {
                 if ($scope.content.body.length > 0) {
                     WebService.postMoreQuestions('content', $scope.content)
@@ -41,6 +43,8 @@ angular.module('JibsApp')
         }])
     .controller('MailPeopleController', ['$scope', '$rootScope', '$location', '$mdMedia', '$mdMenu', 'WebService', '$mdDialog',
         function ($scope, $rootScope, $location, $mdMedia, $mdMenu, WebService, $mdDialog) {
+
+            $rootScope.showNavLogo = true;
 
             $scope.next = function (ev) {
                 if ($scope.content.length > 0) {
