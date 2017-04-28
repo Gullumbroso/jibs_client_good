@@ -158,6 +158,23 @@ md-input-container {
 
 }
 
+.md-icon-button.dialog {
+    margin-right: 3px !important;
+    padding: 0;
+    border-radius: 0;
+}
+
+.md-icon-button.dialog i {
+    color: #d3d3da;
+    border-radius: 0;
+    font-size: 50px;
+    line-height: 1em;
+}
+
+.extra-container {
+    padding: 20px 0;
+}
+
 .navBar {
     background: white;
     height: 80px;

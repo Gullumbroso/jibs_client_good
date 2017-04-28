@@ -1,4 +1,4 @@
-angular.module('JibsApp', ['ngAnimate', 'ngMaterial', 'ngRoute', 'ngCookies', 'directive.g+signin'])
+angular.module('JibsApp', ['ngAnimate', 'ngMaterial', 'ngRoute', 'ngCookies'])
 
     .config(function ($mdThemingProvider) {
         $mdThemingProvider.theme('default')
