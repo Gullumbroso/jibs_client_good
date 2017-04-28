@@ -7,14 +7,9 @@
 <form ng-submit="go($event)">
     <div>
         <div class="input-container">
-            <span>Are</span>
-            <md-input-container md-no-float class="inline-block ">
-                <input ng-model="query.source" placeholder="ex. jews">
+            <md-input-container ng-click="" md-no-float class="inline-block ">
+                <input ng-model="query.source" placeholder="I want to send a mail to Jibs tomorrow">
             </md-input-container>
-            <md-input-container md-no-float class="inline-block">
-                <input ng-model="query.target" placeholder="ex. lazy">
-            </md-input-container>
-            <span>?</span>
         </div>
         <div class="results" ng-show="status == 2">
             <div class="answer" ng-class="{'show-in-delay': presentResults}">
@@ -33,6 +28,7 @@
         </div>
         <div>
             <md-button type="submit" class="md-raised md-primary go">
+                Jib it
                 {{goTitle}}
             </md-button>
         </div>

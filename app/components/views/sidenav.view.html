@@ -1,14 +1,13 @@
 <div ng-mouseover="openLeft()" class="hoverSidenav" ></div>
 <md-sidenav layout="column" class="md-sidebar-left" md-component-id="left"
-            md-disable-backdrop md-whiteframe="4" ng-mouseover="openLeft()" ng-mouseleave="closeLeft()">
+            md-disable-backdrop md-whiteframe="6" ng-mouseover="openLeft()" ng-mouseleave="closeLeft()">
 
     <!--pin sidenav button-->
     <div class="pinButtonDiv">
-        <md-button class="md-fab md-mini pinButton">
+        <md-button class="md-fab md-mini pinButton" ng-click="toggleStick()" ng-class="{'pressed': stick}">
             <i class="material-icon-pin">chrome_reader_mode</i>
         </md-button>
     </div>
-
 
 
     <!--list of steps, representing the process in making-->

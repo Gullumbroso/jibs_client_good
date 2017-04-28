@@ -7,14 +7,14 @@ angular
     .controller('SidenavController', function ($scope, $timeout, $mdSidenav, $log) {
         $scope.openLeft = buildOpener('left');
         $scope.closeLeft = buildCloser('left');
-        // $scope.test = buil('left');
-        //
-        // function testOther(componentId) {
-        //     return function () {
-        //         $mdSidenav(componentId).toggle();
-        //         console.log("open left sidenav");
-        //     };
-        // }
+        $scope.stick = false;
+        $scope.toggleStick = function (){
+                if ($scope.stick) {
+                    $scope.stick = false;
+                } else {
+                    $scope.stick = true;
+                }
+        };
 
         function buildOpener(componentId) {
             return function () {
@@ -25,9 +25,13 @@ angular
 
         function buildCloser(componentId) {
             return function () {
-                $mdSidenav(componentId).close();
-                console.log("close left sidenav");
+                if (!$scope.stick) {
+                    $mdSidenav(componentId).close();
+                    console.log("close left sidenav");
+                }
             };
         }
+
+
     });
 

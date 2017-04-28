@@ -6,4 +6,8 @@ angular.module('JibsApp')
             $scope.signIn = function() {
                 console.log("Yeah!");
             }
+
+            $scope.clickOnInput = function() {
+
+            }
         }]);
