@@ -1,37 +1,12 @@
-<div class="logo">
-    <img width="220" src="assets/images/jibs!.jpg">
-</div>
-<h4>
-    What woud you like to do?
-</h4>
-<form ng-submit="go($event)">
-    <div>
-        <div class="input-container">
-            <md-input-container ng-click="" md-no-float class="inline-block ">
-                <textarea ng-model="query.source" md-maxlength="150" rows="5"
-                          md-select-on-focus placeholder="I want to send a mail to Jibs tomorrow"></textarea>
-            </md-input-container>
-        </div>
-        <div class="results" ng-show="status == 2">
-            <div class="answer" ng-class="{'show-in-delay': presentResults}">
-                <h4 style="font-weight: 600">
-                    {{answer}}
-                </h4>
-            </div>
-            <div class="result-path" ng-class="{'show-in-delay': presentResults}">
-                <ul class="list-inline">
-                    <li ng-repeat="node in path track by $index">
-                        <span ng-class="{'result-even': $index % 2 == 0}">{{node}}</span>
-                        <span ng-show="$index + 1 != path.length" style="margin-left: 8px; color: lightslategray"> >></span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div>
-            <md-button type="submit" class="md-raised md-primary go">
-                Jib it
-                {{goTitle}}
-            </md-button>
-        </div>
+<div class="conversationContainer">
+    <div class="logo">
+        <img width="220" src="assets/images/jibs!.jpg">
     </div>
-</form>
+    <h4>
+        What woud you like to do?
+    </h4>
+    <form ng-submit="go($event)">
+        <input type="text" class="textBox">
+        <md-button type="submit"></md-button>
+    </form>
+</div>
