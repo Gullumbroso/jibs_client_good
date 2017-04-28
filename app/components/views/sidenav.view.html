@@ -12,18 +12,15 @@
     </div>
 
     <!--list of steps, representing the process in making-->
-    <md-list ng-repeat="state in states">
         <!-- List item -->
-        <md-list-item>
+<ul>
+    <li ng-repeat="state in states">
+        <state text="text" icon="icon" color="color" class="state1"></state>
 
-            <state class="state1"></state>
+    </li>
+</ul>
 
             <!--<state class="stateCard" style="background: {{state.color}}"></state>-->
-        </md-list-item>
-    </md-list>
-
-    <state class="state1"></state>
-
 
 
 </md-sidenav>

@@ -13,8 +13,19 @@ angular
 
         $scope.states = [
             {
-                "mail": "mail_outline", "uploud": "file_upload", "download": "file_download",
-                "alarm": "alarm", "event": "date_range"
+                "icon": "mail_outline",
+                "color": "background: #f6105e",
+                "text": "Send a mail"
+            },
+            {
+                "mail": "mail_outline",
+                "color": "background: #ffb60b",
+                "text": "With subject & body"
+            },
+            {
+                "mail": "mail_outline",
+                "color": "background: #4262fe",
+                "text": "Recipients"
             }
         ];
         $scope.actionIconDict = {

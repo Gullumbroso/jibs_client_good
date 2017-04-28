@@ -25,8 +25,16 @@ angular.module('JibsApp')
     .directive('state', ['$location', '$rootScope',
         function ($location, $rootScope) {
             return {
+                scope: {
+                    text: '=',
+                    icon: '=',
+                    color: '='
+                },
                 restrict: 'E',
-                templateUrl: 'app/components/views/state.view.html'
+                templateUrl: 'app/components/views/state.view.html',
+                link: function ($scope) {
+
+                }
             };
         }])
     .directive('home', ['$location', '$rootScope',
