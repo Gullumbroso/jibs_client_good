@@ -4,18 +4,18 @@
     <h4>
         Write your email (subject is optional)
     </h4>
-    <form ng-submit="go($event)">
+    <form ng-submit="next($event)">
         <div>
             <label class="inputGroup">
                 Subject
             </label>
-            <input type="text" class="subjectTextBox" ng-model="subject">
+            <input type="text" class="subjectTextBox" ng-model="content">
         </div>
         <div class="inputGroup">
             <label>
                 Body
             </label>
-            <textarea type="text" class="contentTextBox" ng-model="body"></textarea>
+            <textarea type="text" class="contentTextBox" ng-model="content"></textarea>
         </div>
         <md-button type="submit"></md-button>
     </form>
