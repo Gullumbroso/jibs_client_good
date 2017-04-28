@@ -1,13 +1,17 @@
-<div class="mailSubjectDiv">
-    <div>
-        <input type="text" class="subjectTextBox" placeholder="Enter the mail's subject">
-    </div>
-
-</div>
-
 <div class="mailContentDiv">
     <form ng-submit="go($event)">
-        <input type="text" class="contentTextBox">
+        <div>
+            <label class="inputGroup">
+                Subject
+            </label>
+            <input type="text" class="subjectTextBox" ng-model="subject">
+        </div>
+        <div class="inputGroup">
+            <label>
+                Body
+            </label>
+            <textarea type="text" class="contentTextBox" ng-model="body"></textarea>
+        </div>
         <md-button type="submit"></md-button>
     </form>
 </div>
