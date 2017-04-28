@@ -18,5 +18,9 @@ angular.module('JibsApp')
                 templateUrl: 'app/components/views/mail-people.view.html',
                 controller: 'MailPeopleController'
             })
+            .when('/finish', {
+                templateUrl: 'app/components/views/finish.view.html',
+                controller: 'FinishController'
+            })
             .otherwise({redirectTo: '/'});
     }]);

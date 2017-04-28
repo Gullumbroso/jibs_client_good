@@ -5,6 +5,8 @@ angular.module('JibsApp')
 
             $scope.userQuestion = "";
 
+            $rootScope.showNavLogo = false;
+
             $scope.signIn = function() {
                 console.log("Yeah!");
             };

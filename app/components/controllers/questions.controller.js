@@ -3,6 +3,8 @@ angular.module('JibsApp')
     .controller('MailContentController', ['$scope', '$rootScope', '$location', '$mdMedia', '$mdMenu', 'WebService', '$mdDialog',
         function ($scope, $rootScope, $location, $mdMedia, $mdMenu, WebService, $mdDialog) {
 
+            $rootScope.showNavLogo = true;
+
             $scope.next = function (ev) {
                 if ($scope.content.body.length > 0) {
                     WebService.postMoreQuestions('content', $scope.content)
@@ -42,6 +44,8 @@ angular.module('JibsApp')
     .controller('MailPeopleController', ['$scope', '$rootScope', '$location', '$mdMedia', '$mdMenu', 'WebService', '$mdDialog',
         function ($scope, $rootScope, $location, $mdMedia, $mdMenu, WebService, $mdDialog) {
 
+            $rootScope.showNavLogo = true;
+
             $scope.next = function (ev) {
                 if ($scope.content.length > 0) {
                     WebService.postFirstQuestion($scope.userQuestion)
@@ -56,14 +60,7 @@ angular.module('JibsApp')
                             } else if (WebService.answer.type == 'mail' && WebService.answer.next == 'persons') {
                                 $location.path('/mail/people')
                             } else if (WebService.answer.next == null) {
-                                $mdDialog.show(
-                                    $mdDialog.alert()
-                                        .parent(angular.element(document.body))
-                                        .clickOutsideToClose(true)
-                                        .title("Finished!")
-                                        .textContent(":)")
-                                        .ok("Got it")
-                                );
+                                $location.path('/finish')
                             }
                         }, function () {
                             $mdDialog.show(
