@@ -2,7 +2,7 @@ angular.module('JibsApp')
     .directive('mailContent', ['$location', '$rootScope', function ($location, $rootScope) {
         return {
             restrict: 'E',
-            templateUrl: 'app/components/views/navbar.view.html',
+            templateUrl: 'app/components/views/mail-content.view.html',
             controller: 'NavbarController'
         };
     }])
@@ -10,7 +10,7 @@ angular.module('JibsApp')
         function ($location, $rootScope) {
             return {
                 restrict: 'E',
-                templateUrl: 'app/components/views/conversation.view.html',
+                templateUrl: 'app/components/views/people.view.html',
                 controller: 'ConversationController'
             };
         }]);

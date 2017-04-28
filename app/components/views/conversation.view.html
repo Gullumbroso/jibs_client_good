@@ -8,7 +8,8 @@
     <div>
         <div class="input-container">
             <md-input-container ng-click="" md-no-float class="inline-block ">
-                <input ng-model="query.source" placeholder="I want to send a mail to Jibs tomorrow">
+                <textarea ng-model="query.source" md-maxlength="150" rows="5"
+                          md-select-on-focus placeholder="I want to send a mail to Jibs tomorrow"></textarea>
             </md-input-container>
         </div>
         <div class="results" ng-show="status == 2">

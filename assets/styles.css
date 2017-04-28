@@ -43,7 +43,7 @@ button {
 
 .input-container span {
     position: relative;
-    top: 11px;
+    top: -11px;
 }
 
 .logo {
@@ -225,4 +225,30 @@ md-input-container {
 
 .googleSignIn img {
     width: 340px;
+}
+.mailSubjectDiv{
+    width: 300px;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 2px solid lightgrey;
+    border-radius: 7px;
+    box-sizing: border-box;
+}
+.mailSubjectDiv input{
+   margin-top: 10px;
+}
+.mailContentDiv{
+    border-top: 300px;
+
+}
+.mailContentInput{
+    width: 100%;
+    height:400px;
+    margin-left: 20px;
+    border-top: 300px;
+    padding: 0px 20px;
+    display: inline-block;
+    border: 2px solid pink;
+    border-radius: 7px;
+    box-sizing: border-box;
 }
