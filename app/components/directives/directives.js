@@ -28,5 +28,21 @@ angular.module('JibsApp')
                 restrict: 'E',
                 templateUrl: 'app/components/views/state.view.html'
             };
-        }]);
+        }])
+    .directive('home', ['$location', '$rootScope',
+    function ($location, $rootScope) {
+        return {
+            restrict: 'E',
+            templateUrl: 'app/components/views/home.view.html'
+        };
+    }])
+    .directive('questions', ['$location', '$rootScope',
+        function ($location, $rootScope) {
+            return {
+                restrict: 'E',
+                templateUrl: 'app/components/views/questions.view.html'
+            };
+        }])
+;
+
 
