@@ -84,7 +84,7 @@ button {
 
 
 h4 {
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: 300;
     line-height: 1.2em;
     color: rgb(61, 57, 62);
@@ -261,11 +261,11 @@ md-input-container {
 .navBar .navBarButton {
     color: #ffb60b;
     /*color: #304FFE;*/
-    font-size: 2.0em;
+    font-size: 1.2em;
     font-weight: 800;
-    line-height: 2.6em;
-    padding: 27px 40px;
-    margin-right: 16px;
+    line-height: 2.7em;
+    padding: 27px 20px;
+    /*margin-right: 10px;*/
     transition: all ease-out 0.2s;
 }
 
@@ -276,10 +276,10 @@ md-input-container {
 .mainButton {
     color: white;
     font-weight: bolder;
-    font-size: 1.7em;
-    margin-top: 30px;
-    padding: 15px 30px;
-    height: 85px;
+    font-size: 1.3em;
+    margin-top: 25px;
+    padding: 13px 30px;
+    height: 60px;
     min-width: 120px;
     border-radius: 5px;
     background-color: #f6105e;
@@ -351,4 +351,10 @@ label {
 mailContentDiv {
     width: 760px;
     margin: auto;
+}
+
+.contactDiv{
+    margin:auto;
+    width:400px;
+    /*align-content: center;*/
 }
