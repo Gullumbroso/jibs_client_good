@@ -45,7 +45,7 @@ angular.module('JibsApp')
 
             $scope.next = function (ev) {
                 if ($scope.content.length > 0) {
-                    WebService.postFirstQuestion($scope.userQuestion)
+                    WebService.postMoreQuestions()
                         .then(function (response) {
                             var dataObj = response.data;
                             WebService.answer.knownData = dataObj.data;
