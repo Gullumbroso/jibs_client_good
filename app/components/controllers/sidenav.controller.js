@@ -13,13 +13,18 @@ angular
 
         $scope.states = [
             {
-
+                "mail": "mail_outline", "uploud": "file_upload", "download": "file_download",
+                "alarm": "alarm", "event": "date_range"
             }
         ];
-        $scope.actionIconDict = {"mail": "mail_outline", "uploud": "file_upload", "download": "file_download",
-        "alarm":"alarm", "event":"date_range"};
-        $scope.actionStrDict = {"mail": "Send a mail", "uploud": "Upload a file", "download": "Download a file",
-            "alarm":"Set an alarm", "event":"Create an event"};
+        $scope.actionIconDict = {
+            "mail": "mail_outline", "uploud": "file_upload", "download": "file_download",
+            "alarm": "alarm", "event": "date_range"
+        };
+        $scope.actionStrDict = {
+            "mail": "Send a mail", "uploud": "Upload a file", "download": "Download a file",
+            "alarm": "Set an alarm", "event": "Create an event"
+        };
 
 
         $scope.toggleStick = function () {
@@ -32,7 +37,7 @@ angular
         $scope.generateState = function () {
 
             // generate state
-            $scope.colorIndex = ($scope.colorIndex+1)%3;
+            $scope.colorIndex = ($scope.colorIndex + 1) % 3;
         };
 
         function buildOpener(componentId) {
