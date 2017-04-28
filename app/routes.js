@@ -11,8 +11,10 @@ angular.module('JibsApp')
                 controller: 'HomeController',
                 pageTrack: '/home' // angular-google-analytics extension
             })
+            .when('/sign-up', {
+                templateUrl: 'app/components/views/sign-in-dialog.view.html',
+                controller: 'SignUpController',
+                pageTrack: '/sign-up' // angular-google-analytics extension
+            })
             .otherwise({redirectTo: '/'});
-
-        $locationProvider.html5Mode(true);
-
     }]);
