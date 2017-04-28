@@ -21,6 +21,10 @@ button {
     display: inline-block;
 }
 
+.container {
+    padding-top: 100px;
+}
+
 .main-container {
     margin: 40px;
     padding: 40px;
@@ -172,7 +176,8 @@ md-input-container {
 }
 
 .extra-container {
-    padding: 20px 0;
+    width: 350px;
+    margin: 40px 0;
 }
 
 .navBar {

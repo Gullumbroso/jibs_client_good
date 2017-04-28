@@ -13,10 +13,11 @@
         <md-dialog-content>
             <div class="md-dialog-content text-center">
                 <div class="extra-container">
-                    <h2>Sign in with your Google account</h2>
-                    <button class="googleSignIn">
-                        <img src="assets/images/btn_google_signin_dark_normal_web@2x.png" />
-                    </button>
+                    <h2 style="margin-bottom: 40px">Sign in with your Google account</h2>
+                    <div ng-include="googleButtonContainer"></div>
+                    <script type='text/ng-template' id='googleButton'>
+                        <div id="googleButtonPlaceholder" class="text-center"></div>
+                    </script>
                 </div>
             </div>
         </md-dialog-content>

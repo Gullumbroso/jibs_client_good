@@ -1,7 +1,7 @@
 angular.module('JibsApp')
 
-    .controller('NavbarController', ['$scope', '$rootScope', '$location', '$routeParams', '$mdMedia', '$mdMenu', '$mdDialog',
-        function ($scope, $rootScope, $location, $routeParams, $mdMedia, $mdMenu, $mdDialog) {
+    .controller('NavbarController', ['$scope', '$rootScope', '$location', '$timeout', '$routeParams', '$mdMedia', '$mdMenu', '$mdDialog',
+        function ($scope, $rootScope, $location, $timeout, $routeParams, $mdMedia, $mdMenu, $mdDialog) {
 
             $scope.customFullscreen = false;
 
@@ -21,13 +21,18 @@ angular.module('JibsApp')
                     });
             };
 
-            function SignInDialogController($scope, $mdDialog) {
+            function SignInDialogController($scope, $mdDialog, $timeout, $window) {
 
-                $scope.$on('event:google-plus-signin-success', function (event,authResult) {
-                    // Send login to server or save into cookie
-                });
-                $scope.$on('event:google-plus-signin-failure', function (event,authResult) {
-                    // Auth failure or signout detected
+                $scope.googleButtonContainer = 'googleButton';
+                $timeout(function(){
+                    $window.gapi.signin2.render('googleButtonPlaceholder', {
+                        'scope': 'https://www.googleapis.com/auth/plus.login',
+                        'width': 350,
+                        'height': 60,
+                        'longtitle': true,
+                        'theme': 'dark',
+                        'onsuccess': $scope.federateWithGoogle
+                    });
                 });
 
                 $scope.hide = function() {

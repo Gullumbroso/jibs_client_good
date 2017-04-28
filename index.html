@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
+    <meta name="google-signin-client_id" content="1056132901517-2u7bjlfg8c4ih15jsi0dqvsks2gl7q9e.apps.googleusercontent.com">
     <title>Jibs</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body ng-app="JibsApp" ng-cloak>
-<div class="main-container text-center" ng-controller="HomeController">
+<div class="container text-center" ng-controller="HomeController">
 
     <sidenav></sidenav>
     <navbar></navbar>
@@ -28,10 +28,14 @@
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="https://apis.google.com/js/api:client.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
 
 <script type="text/javascript" src="app/app.js"></script>
 <script type="text/javascript" src="app/routes.js"></script>
+
+<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 
 <script type="text/javascript" src="app/components/controllers/conversation.controller.js"></script>
 <script type="text/javascript" src="app/components/controllers/home.controller.js"></script>
