@@ -4,7 +4,7 @@ angular.module('JibsApp')
         function ($scope, $rootScope, $location, $mdMedia, $mdMenu, WebService, $mdDialog) {
 
             $scope.next = function (ev) {
-                if ($scope.userQuestion.length > 0) {
+                if ($scope.content.body.length > 0) {
                     WebService.postMoreQuestions('content', $scope.content)
                         .then(function (response) {
                             var dataObj = response.data;
@@ -43,7 +43,7 @@ angular.module('JibsApp')
         function ($scope, $rootScope, $location, $mdMedia, $mdMenu, WebService, $mdDialog) {
 
             $scope.next = function (ev) {
-                if ($scope.userQuestion.length > 0) {
+                if ($scope.content.length > 0) {
                     WebService.postFirstQuestion($scope.userQuestion)
                         .then(function (response) {
                             var dataObj = response.data;

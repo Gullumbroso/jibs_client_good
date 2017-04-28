@@ -7,7 +7,7 @@ angular.module('JibsApp')
         function WebServiceFactory($http, $rootScope) {
 
             var FIRST_ANSWER_URL = 'http://127.0.0.1:8000/first_answer/';
-            var MORE_QUESTIONS_URL = 'http://127.0.0.1:8000/more_questions/';
+            var MORE_QUESTIONS_URL = 'http://127.0.0.1:8000/update_data/';
 
             var service = {};
 
