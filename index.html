@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>Jibs</title>
@@ -14,25 +15,31 @@
 <body ng-app="JibsApp" ng-cloak>
 <div class="main-container text-center" ng-controller="HomeController">
 
+    <navbar></navbar>
     <sidenav></sidenav>
     <conversation></conversation>
-
 
 </div>
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-cookies.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
 
 <script type="text/javascript" src="app/app.js"></script>
+<script type="text/javascript" src="app/routes.js"></script>
+
+<script type="text/javascript" src="assets/libs/google-plus-signin.js"></script>
 
 <script type="text/javascript" src="app/components/controllers/conversation.controller.js"></script>
 <script type="text/javascript" src="app/components/controllers/home.controller.js"></script>
 <script type="text/javascript" src="app/components/controllers/navbar.controller.js"></script>
 <script type="text/javascript" src="app/components/controllers/sidenav.controller.js"></script>
+<script type="text/javascript" src="app/components/controllers/sign-in.controller.js"></script>
 
 <script type="text/javascript" src="app/components/directives/directives.js"></script>
 

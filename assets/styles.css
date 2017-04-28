@@ -3,6 +3,16 @@ html, body {
     background: white;
 }
 
+a {
+    text-decoration: none !important;
+}
+
+button {
+    border: 0;
+    padding: 0;
+    background: white;
+}
+
 .text-center {
     text-align: center;
 }
@@ -33,7 +43,7 @@ html, body {
 h4 {
     font-size: 2em;
     font-weight: 100;
-    line-height:1.5em;
+    line-height: 1.5em;
 }
 
 md-input-container {
@@ -76,9 +86,9 @@ md-input-container {
 
 .hoverSidenav{
     position: absolute;
-    top:0;
-    bottom:0;
-    left:0;
+    top: 0;
+    bottom: 0;
+    left: 0;
     width: 40px;
     opacity: 0;
 }
@@ -146,4 +156,36 @@ md-input-container {
     direction: ltr;
     color: white;
 
+}
+
+.navBar {
+    background: white;
+    height: 80px;
+    border-bottom: 1px solid #ededf1;
+}
+
+.navBar .navbar-list {
+    margin: 0;
+}
+
+.navBar .navBarButton {
+    color: #304FFE;
+    font-size: 2.0em;
+    font-weight: 800;
+    line-height: 2.6em;
+    padding: 27px 40px;
+    margin-right: 16px;
+    transition: all ease-out 0.2s;
+}
+
+.navBar .navBarButton:hover {
+    background: #e6e6ed;
+}
+
+.googleSignIn {
+    margin: 30px 0 20px;
+}
+
+.googleSignIn img {
+    width: 340px;
 }

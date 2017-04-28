@@ -1,17 +1,16 @@
-angular.module('JibsApp', ['ngAnimate', 'ngMaterial'])
+angular.module('JibsApp', ['ngAnimate', 'ngMaterial', 'ngRoute', 'ngCookies', 'directive.g+signin'])
 
     .config(function ($mdThemingProvider) {
         $mdThemingProvider.theme('default')
-            .primaryPalette('purple', {
-                'default': '500'
+            .primaryPalette('indigo', {
+                'default': 'A700'
             })
-            .accentPalette('purple', {
+            .accentPalette('pink', {
                 'default': '500'
             })
     })
 
     .run(['$rootScope', '$location','$http',
         function ($rootScope, $location, $http) {
-
 
         }]);
