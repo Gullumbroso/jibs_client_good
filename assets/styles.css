@@ -61,7 +61,7 @@ button {
 
 @media (min-width: 900px) {
     .conversationContainer {
-        width: 860px;
+        width: 760px;
     }
 }
 
@@ -74,7 +74,7 @@ button {
     border: 1px solid #f0f0f5;
     border-radius: 3px;
     box-shadow: 0 3px 4px rgba(0,0,0,0.15);
-    font-size: 2em;
+    font-size: 1.7em;
     padding: 10px 30px;
     transition: all ease-out 0.3s;
 }
@@ -82,8 +82,9 @@ button {
 .textBox:focus {
 }
 
+
 h4 {
-    font-size: 4em;
+    font-size: 3em;
     font-weight: 300;
     line-height: 1.5em;
     color: rgb(61, 57, 62);
@@ -182,7 +183,8 @@ md-input-container {
 
 .pinButton{
     margin-top: 20px;
-    background: #304FFE !important;
+    margin-right: 20px;
+    background: #4262fe !important;
     box-shadow: 0 3px 4px rgba(220,200,230,0.15);
 }
 .pressed {
@@ -192,7 +194,7 @@ md-input-container {
 /*todo: check how to make line thinner*/
 .material-icons {
     font-family: 'Material Icons';
-    font-weight: normal;
+    font-weight: lighter;
     font-style: normal;
     font-size: 60px;  /* Preferred icon size */
     display: inline-block;
@@ -205,22 +207,22 @@ md-input-container {
     direction: ltr;
     color: white;
 }
-.material-icon-pin {
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 25px;
-    display: inline-block;
-    text-align: right;
-    /*line-height: 1.5;*/
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-    color: white;
+    /*.material-icon-pin {*/
+        /*font-family: 'Material Icons';*/
+        /*font-weight: normal;*/
+        /*font-style: normal;*/
+        /*font-size: 25px;*/
+        /*display: inline-block;*/
+        /*text-align: right;*/
+        /*!*line-height: 1.5;*!*/
+        /*text-transform: none;*/
+        /*letter-spacing: normal;*/
+        /*word-wrap: normal;*/
+        /*white-space: nowrap;*/
+        /*direction: ltr;*/
+        /*color: white;*/
 
-}
+    /*}*/
 
 .md-icon-button.dialog {
     margin-right: 3px !important;
