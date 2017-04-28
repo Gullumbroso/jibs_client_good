@@ -42,7 +42,6 @@ angular.module('JibsApp')
     .controller('MailPeopleController', ['$scope', '$rootScope', '$location', '$mdMedia', '$mdMenu', 'WebService', '$mdDialog',
         function ($scope, $rootScope, $location, $mdMedia, $mdMenu, WebService, $mdDialog) {
 
-
             $scope.next = function (ev) {
                 if ($scope.userQuestion.length > 0) {
                     WebService.postFirstQuestion($scope.userQuestion)
@@ -77,5 +76,20 @@ angular.module('JibsApp')
                             );
                         })
                 }
-            }
+            };
+
+            $scope.contacts = [
+                {
+                    'name': "Gilad Lumbroso",
+                    "photo": "/assets/images/gilad_contact.jpg"
+                },
+                {
+                    'name': "Omer Alon",
+                    "photo": "/assets/images/omer_contact.jpg"
+                },
+                {
+                    'name': "Laure Scemama",
+                    "photo": "/assets/images/laure_contact.jpg"
+                }
+            ]
         }]);

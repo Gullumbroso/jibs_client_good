@@ -36,8 +36,11 @@ angular.module('JibsApp')
                     });
                 });
 
-                $scope.success = function (googleUser) {
+                $scope.hideNav = true;
 
+                $scope.success = function (googleUser) {
+                    // $scope.name = googleUser.name;
+                    $scope.hideNav = false;
                 };
 
                 $scope.failure = function (error) {
