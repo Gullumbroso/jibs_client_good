@@ -18,9 +18,9 @@ angular.module('JibsApp')
                             WebService.answer.type = dataObj.type;
                             WebService.answer.next = dataObj.next;
 
-                            if (type == 'mail' && next == 'subject') {
+                            if (WebService.answer.type == 'mail' && WebService.answer.next == 'subject') {
                                 $location.path('/mail/content');
-                            } else if (type == 'mail' && next == 'persons') {
+                            } else if (WebService.answer.type == 'mail' && WebService.answer.next == 'persons') {
                                 $location.path('/mail/people')
                             } else if (WebService.answer.next == null) {
                                 $mdDialog.show(

@@ -43,7 +43,7 @@ angular.module('JibsApp')
         function ($scope, $rootScope, $location, $mdMedia, $mdMenu, WebService, $mdDialog) {
 
 
-            $scope.firstQuestion = function (ev) {
+            $scope.next = function (ev) {
                 if ($scope.userQuestion.length > 0) {
                     WebService.postFirstQuestion($scope.userQuestion)
                         .then(function (response) {
