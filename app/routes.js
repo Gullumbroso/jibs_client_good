@@ -8,13 +8,15 @@ angular.module('JibsApp')
             })
             .when('/home', {
                 templateUrl: 'app/components/views/home.view.html',
-                controller: 'ConversationController',
-                pageTrack: '/home' // angular-google-analytics extension
+                controller: 'ConversationController'
             })
-            .when('/questions', {
-                templateUrl: 'app/components/views/questions.view.html',
-                controller: 'QuestionsController',
-                pageTrack: '/sign-up' // angular-google-analytics extension
+            .when('/mail/content', {
+                templateUrl: 'app/components/views/mail-content.view.html',
+                controller: 'MailContentController'
+            })
+            .when('/mail/people', {
+                templateUrl: 'app/components/views/mail-people.view.html',
+                controller: 'MailPeopleController'
             })
             .otherwise({redirectTo: '/'});
     }]);

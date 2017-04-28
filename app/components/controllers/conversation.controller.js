@@ -14,12 +14,25 @@ angular.module('JibsApp')
                     WebService.postFirstQuestion($scope.userQuestion)
                         .then(function (response) {
                             var dataObj = response.data;
-                            var next = dataObj.next;
-                            var type = dataObj.type;
-                            var dataHeKnows = dataObj.data;
-                            console.log(next);
-                            console.log(type);
-                            console.log(dataHeKnows);
+                            WebService.answer.knownData = dataObj.data;
+                            WebService.answer.type = dataObj.type;
+                            WebService.answer.next = dataObj.next;
+
+                            if (type == 'mail' && next == 'subject') {
+                                $location.path('/mail/content');
+                            } else if (type == 'mail' && next == 'persons') {
+                                $location.path('/mail/people')
+                            } else if (WebService.answer.next == null) {
+                                $mdDialog.show(
+                                    $mdDialog.alert()
+                                        .parent(angular.element(document.body))
+                                        .clickOutsideToClose(true)
+                                        .title("Finished!")
+                                        .textContent(":)")
+                                        .ok("Got it")
+                                );
+                            }
+
                         }, function () {
                             $mdDialog.show(
                                 $mdDialog.alert()

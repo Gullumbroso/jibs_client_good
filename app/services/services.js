@@ -23,7 +23,7 @@ angular.module('JibsApp')
                 return $http.get(FIRST_ANSWER_URL, {params: {'firstQuestion': firstQuestion}})
             }
 
-            function postMoreQuestions(question) {
-                return $http.get(MORE_QUESTIONS_URL, {params: {'moreQuestions': question}})
+            function postMoreQuestions(type, answerObj) {
+                return $http.get(MORE_QUESTIONS_URL, {params: {'type': type, 'answer': answerObj}})
             }
         }]);
