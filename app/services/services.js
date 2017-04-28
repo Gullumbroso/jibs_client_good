@@ -11,29 +11,13 @@ angular.module('JibsApp')
 
             var service = {};
 
-            service.saveSession = saveSession;
+            service.postFirstQuestion = postFirstQuestion;
+            service.postMoreQuestions = postMoreQuestions;
 
             return service;
 
-            /**
-             * Saves the current purchase session in the local storage.
-             * @param purchase - the purchase object ot save.
-             */
-            function saveSession(purchase) {
-                if (purchase) {
-                    service.purchase = purchase;
-                    try {
-                        localStorage.setItem(CO_SESSION, JSON.stringify(purchase));
-                    }
-                    catch (err) {
-                        console.log("Couldn't save product's data: " + err);
-                    }
-                } else {
-                    console.log("No product to save to the local storage.");
-                }
-            }
 
-            function postFirstAnswer(firstQuestion) {
+            function postFirstQuestion(firstQuestion) {
                 return $http.get(FIRST_ANSWER_URL, {params: {'firstQuestion': firstQuestion}})
             }
 

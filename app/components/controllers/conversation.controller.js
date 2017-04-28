@@ -3,15 +3,15 @@ angular.module('JibsApp')
     .controller('ConversationController', ['$scope', '$rootScope', '$location', '$mdMedia', '$mdMenu', 'WebService', '$mdDialog',
         function ($scope, $rootScope, $location, $mdMedia, $mdMenu, WebService, $mdDialog) {
 
-            $scope.firstQuestion = "";
+            $scope.userQuestion = "";
 
             $scope.signIn = function() {
                 console.log("Yeah!");
             };
 
             $scope.firstQuestion = function(ev) {
-                if (firstQuestion.length > 0) {
-                    WebService.firstQuestion($scope.firstQuestion)
+                if ($scope.userQuestion.length > 0) {
+                    WebService.postFirstQuestion($scope.userQuestion)
                         .then(function () {
                             $mdDialog.show(
                                 $mdDialog.alert()
