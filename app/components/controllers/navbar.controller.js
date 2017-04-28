@@ -26,14 +26,22 @@ angular.module('JibsApp')
                 $scope.googleButtonContainer = 'googleButton';
                 $timeout(function(){
                     $window.gapi.signin2.render('googleButtonPlaceholder', {
-                        'scope': 'https://www.googleapis.com/auth/plus.login',
+                        'scope': 'profile email',
                         'width': 350,
                         'height': 60,
                         'longtitle': true,
                         'theme': 'dark',
-                        'onsuccess': $scope.federateWithGoogle
+                        'onsuccess': $scope.success,
+                        'onfailure': $scope.failure
                     });
                 });
+
+                $scope.success = function (googleUser) {
+
+                };
+
+                $scope.failure = function (error) {
+                };
 
                 $scope.hide = function() {
                     $mdDialog.hide();
