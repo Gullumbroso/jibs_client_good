@@ -4,16 +4,18 @@
 
 angular
     .module('JibsApp')
-    .controller('SidenavController', function ($scope, $timeout, $mdSidenav, $log) {
+    .controller('SidenavController', function ($scope, $rootScope, $timeout, $mdSidenav, $log) {
         $scope.openLeft = buildOpener('left');
         $scope.closeLeft = buildCloser('left');
         $scope.stick = false;
-        $scope.toggleStick = function (){
-                if ($scope.stick) {
-                    $scope.stick = false;
-                } else {
-                    $scope.stick = true;
-                }
+
+        TYPES = ['Action', '$rootScope', 'Triggers', 'People', 'Time', 'Venue'];
+
+        $scope.statesList = ["State", "State", "State"];
+
+        $scope.toggleStick = function () {
+            $scope.stick = !$scope.stick;
+            return $scope.stick;
         };
 
         function buildOpener(componentId) {

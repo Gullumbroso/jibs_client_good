@@ -9,19 +9,12 @@
         </md-button>
     </div>
 
-
     <!--list of steps, representing the process in making-->
-    <md-list>
-        <!-- List item #1 -->
+    <md-list ng-repeat="state in states">
+        <!-- List item -->
         <md-list-item>
-            <state class="state1"></state>
+            <state class="stateCard"></state>
         </md-list-item>
-
-        <!-- List item #2 -->
-        <md-list-item>
-            <state class="state2"></state>
-        </md-list-item>
-
     </md-list>
 
 </md-sidenav>

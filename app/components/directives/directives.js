@@ -26,7 +26,7 @@ angular.module('JibsApp')
         function ($location, $rootScope) {
             return {
                 restrict: 'E',
-                templateUrl: 'app/components/views/state.view.html',
+                templateUrl: 'app/components/views/state.view.html'
             };
         }]);
 
