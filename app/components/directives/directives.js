@@ -21,5 +21,12 @@ angular.module('JibsApp')
             templateUrl: 'app/components/views/sidenav.view.html',
             controller: 'SidenavController'
         };
-    }]);
+    }])
+    .directive('state', ['$location', '$rootScope',
+        function ($location, $rootScope) {
+            return {
+                restrict: 'E',
+                templateUrl: 'app/components/views/state.view.html',
+            };
+        }]);
 

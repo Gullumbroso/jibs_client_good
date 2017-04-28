@@ -3,27 +3,24 @@
             md-disable-backdrop ng-mouseover="openLeft()" ng-mouseleave="closeLeft()">
 
     <!--pin sidenav button-->
-    <md-button class="md-fab md-mini pinButton">
-        <md-icon md-svg-src="img/icons/cake.svg"></md-icon>
-    </md-button>
+    <div class="pinButtonDiv">
+        <md-button class="md-fab md-mini pinButton">
+            <i class="material-icon-pin">chrome_reader_mode</i>
+        </md-button>
+    </div>
+
 
 
     <!--list of steps, representing the process in making-->
     <md-list>
         <!-- List item #1 -->
         <md-list-item>
-            <md-button>
-                <md-icon md-svg-src="./assets/svg/avatar-1.svg" class="avatar"></md-icon>
-                Lia Luogo
-            </md-button>
+            <state class="state1"></state>
         </md-list-item>
 
         <!-- List item #2 -->
         <md-list-item>
-            <md-button>
-                <md-icon md-svg-src="./assets/svg/avatar-4.svg" class="avatar"></md-icon>
-                Lawrence Ray
-            </md-button>
+            <state></state>
         </md-list-item>
 
     </md-list>

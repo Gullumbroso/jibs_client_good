@@ -82,3 +82,68 @@ md-input-container {
     width: 40px;
     opacity: 0;
 }
+.state {
+    border-radius: 20px;
+    margin-left: 15px;
+    margin-top: 55px;
+    width: 250px;
+    height: 170px;
+    background: #D81B60;
+}
+
+.stateText{
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5em;
+    /*line-height:1em;*/
+    font-weight: bold;
+    /*font-size: 50px;  !* Preferred icon size *!*/
+    display: inline-block;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    color: white;
+}
+
+.md-sidebar-left{
+    border: #ffcf32 solid 2px;
+}
+
+.pinButton{
+
+    align:right;
+    background: blue;
+}
+
+/*todo: check how to make line thinner*/
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 60px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1.5;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    color: white;
+}
+.material-icon-pin {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 25px;
+    display: inline-block;
+    text-align: right;
+    /*line-height: 1.5;*/
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    color: white;
+
+}
