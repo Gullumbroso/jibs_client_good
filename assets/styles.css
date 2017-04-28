@@ -151,13 +151,33 @@ md-input-container {
     border-radius: 10px;
     margin-left: 30px;
     margin-top: 55px;
-    width: 250px;
+    width: 200px;
     height: 140px;
     background: #f6105e;
     box-shadow: 0 3px 4px rgba(220,200,230,0.15);
 
 }
 
+.state2 {
+    border-radius: 10px;
+    margin-left: 30px;
+    margin-top: 55px;
+    width: 250px;
+    height: 140px;
+    background: #ffb60b;
+    box-shadow: 0 3px 4px rgba(220,200,230,0.15);
+
+}
+.state3 {
+    border-radius: 10px;
+    margin-left: 30px;
+    margin-top: 55px;
+    width: 250px;
+    height: 140px;
+    background: #4262fe;
+    box-shadow: 0 3px 4px rgba(220,200,230,0.15);
+
+}
 
 .stateText{
     font-family: 'Roboto', sans-serif;
