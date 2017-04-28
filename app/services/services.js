@@ -14,6 +14,8 @@ angular.module('JibsApp')
             service.postFirstQuestion = postFirstQuestion;
             service.postMoreQuestions = postMoreQuestions;
 
+            service.answer = [];
+
             return service;
 
 
