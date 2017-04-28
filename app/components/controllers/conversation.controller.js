@@ -25,14 +25,7 @@ angular.module('JibsApp')
                             } else if (WebService.answer.type == 'mail' && WebService.answer.next == 'persons') {
                                 $location.path('/mail/people')
                             } else if (WebService.answer.next == null) {
-                                $mdDialog.show(
-                                    $mdDialog.alert()
-                                        .parent(angular.element(document.body))
-                                        .clickOutsideToClose(true)
-                                        .title("Finished!")
-                                        .textContent(":)")
-                                        .ok("Got it")
-                                );
+                                $location.path('/finish')
                             }
 
                         }, function () {

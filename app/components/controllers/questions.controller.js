@@ -29,14 +29,7 @@ angular.module('JibsApp')
                                 );
                             }
                         }, function () {
-                            $mdDialog.show(
-                                $mdDialog.alert()
-                                    .parent(angular.element(document.body))
-                                    .clickOutsideToClose(true)
-                                    .title("Failure...")
-                                    .textContent(":(")
-                                    .ok("Got it")
-                            );
+                            $location.path('/mail/people')
                         })
                 }
             }
