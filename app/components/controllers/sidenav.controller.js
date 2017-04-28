@@ -11,7 +11,7 @@ angular
 
         TYPES = ['Action', '$rootScope', 'Triggers', 'People', 'Time', 'Venue'];
 
-        $scope.statesList = ["State", "State", "State"];
+        // $scope.states = ;
         $scope.actionIconDict = {"mail": "mail_outline", "uploud": "file_upload", "download": "file_download",
         "alarm":"alarm", "event":"date_range"};
         $scope.actionStrDict = {"mail": "Send a mail", "uploud": "Upload a file", "download": "Download a file",
