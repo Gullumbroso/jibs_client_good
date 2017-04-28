@@ -176,6 +176,10 @@ md-input-container {
 }
 
 .navBar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
     background: white;
     height: 80px;
     border-bottom: 1px solid #ededf1;

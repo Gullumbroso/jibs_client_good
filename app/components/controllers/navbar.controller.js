@@ -11,7 +11,7 @@ angular.module('JibsApp')
                     templateUrl: 'app/components/views/sign-in-dialog.view.html',
                     parent: angular.element(document.body),
                     targetEvent: ev,
-                    clickOutsideToClose: false,
+                    clickOutsideToClose: true,
                     fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
                 })
                     .then(function(answer) {
