@@ -281,10 +281,11 @@ md-input-container {
 .navBar .navBarButton {
     color: #ffb60b;
     /*color: #304FFE;*/
-    font-size: 1.2em;
+    font-size: 1.4em;
     font-weight: 800;
-    line-height: 2.7em;
-    padding: 27px 20px;
+    line-height: 4em;
+    padding: 27px 40px;
+    margin-right: 10px;
     /*margin-right: 10px;*/
     transition: all ease-out 0.2s;
 }

@@ -5,7 +5,9 @@ angular.module('JibsApp')
 
             $rootScope.showNavLogo = true;
 
-            $scope.next = function (ev) {
+            $rootScope.showState2 = true;
+
+                $scope.next = function (ev) {
                 if ($scope.content.body.length > 0) {
                     WebService.postMoreQuestions('content', $scope.content)
                         .then(function (response) {
@@ -38,6 +40,8 @@ angular.module('JibsApp')
         function ($scope, $rootScope, $location, $mdMedia, $mdMenu, WebService, $mdDialog) {
 
             $rootScope.showNavLogo = true;
+
+            $rootScope.showState3 = true;
 
             $scope.next = function (ev) {
                 if ($scope.content.length > 0) {
